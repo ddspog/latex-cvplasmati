@@ -1,0 +1,122 @@
+{
+    "contact": {
+        "name": [
+            "Rubens",
+            "Costa",
+            "Rubens Costa"
+        ],
+        "cellphone": "+55 83 98221 9455",
+        "email": "rubcosta@gmail.com",
+        "github": "rubcosta",
+        "gitlab": "rubcosta",
+        "address": {
+            "EN": "1302 Hemingway High Ave.",
+            "PT": "Avenida Hemingway High, 1302"
+        },
+        "city": "New York",
+        "state": "NY",
+        "country": {
+            "EN": "USA",
+            "PT": "EUA"
+        },
+        "about": {
+            "EN": "A new test developer that likes plenty of necessary stuff to fill a nice resume.",
+            "PT": "Um desenvolvedor dummy que gosta de todo tipo de informação necessária para preencher um bom currículo."
+        }
+    },
+    "education": {
+        "keyword-title": {
+            "EN": "Education",
+            "PT": "Formação"
+        },
+        "local": {
+            "EN": "New York (NY), USA",
+            "PT": "New York (NY), EUA"
+        },
+        "university": {
+            "EN": "Columbia University",
+            "PT": "Universidade Columbia"
+        },
+        "period": {
+            "EN": "May 2013 --- Mar 2018",
+            "PT": "Mai 2013 --- Mar 2018"
+        },
+        "major": {
+            "EN": "Bachelor in Computer Science",
+            "PT": "Bacharelado em Ciências da Computação"
+        },
+        "grade": {
+            "EN": "GPA: 9.32/10.0",
+            "PT": "CRA: 9.32/10.0"
+        }
+    },
+    "employment": {
+        "keyword-title": {
+            "EN": "Employment",
+            "PT": "Experiência"
+        },
+        "works-n": 3,
+        "works-npone": 4,
+        "works": [{
+                "type": {
+                    "EN": "Back-End Dev.",
+                    "PT": "Desenvolvedor (Back-End)"
+                },
+                "employer": {
+                    "EN": "Signoovium",
+                    "PT": "Signoovium"
+                },
+                "period": {
+                    "EN": "Nov 2013 --- Jul 2014",
+                    "PT": "Nov 2013 --- Jul 2014"
+                },
+                "title": {
+                    "EN": "Intern responsible for building and monitoring the user testing framework for local app.",
+                    "PT": "Estagiário responsável por montar e monitorar a framework para teste com usuários de um app da empresa.'"
+                },
+                "info": {
+                    "EN": "Work with back-end in Java Play framework, creating the database handlers.",
+                    "PT": "Trabalhou no back-end com a framework Play em Java, criando o handlers do banco de dados."
+                }
+            },
+            {
+                "type": {
+                    "EN": "Front-End Dev.",
+                    "PT": "Desenvolvedr (Front-End)"
+                },
+                "employer": {
+                    "EN": "Artuuro",
+                    "PT": "Artuuro"
+                },
+                "period": {
+                    "EN": "Aug 2014 --- May 2015",
+                    "PT": "Ago 2014 --- Mai 2015"
+                },
+                "title": {
+                    "EN": "Was one of the founding members of a service for connecting students to low-cost resources for projects using university connections.",
+                    "PT": "Foi um dos fundadores de um serviço para conectar estudantes a fornecedores de recursos baratos para projetos, utilizando conexões universitárias."
+                },
+                "info": {
+                    "EN": "Worked in front-end of main application, using AngularJS and various animation libraries with JQuery.",
+                    "PT": "Trabalhou em maioria no front-end do aplicativo principal, utilizando AngularJS e várias bibliotecas de animações em JQuery."
+                }
+            }
+        ]
+    },
+    "skills": {
+        "keyword-title": {
+            "EN": "Skills",
+            "PT": "Habilidades Técnicas"
+        },
+        "keyword-strong": {
+            "EN": "Strong",
+            "PT": "Principais"
+        },
+        "keyword-knowledgeable": {
+            "EN": "Knowledgeable",
+            "PT": "Experiente"
+        },
+        "strong": "Java, ES6, SQL, Jquery",
+        "knowledgeable": "Play, PHP, C++, R"
+    }
+}
