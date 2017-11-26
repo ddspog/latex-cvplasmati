@@ -1,3 +1,4 @@
+% !TEX program = lualatex
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cvplasmati}[2017/11/22 Plasmati CV Template]
 
@@ -10,18 +11,27 @@
 \DeclareStringOption[EN,PT]{lang}
 \ProcessKeyvalOptions*
  
-% !TEX program = lualatex
-\LoadClass[a4paper,10pt]{article} % Default font size and paper size
+% Default font size and paper size
+\LoadClass[a4paper,10pt]{article}
 
-
-\RequirePackage{fontspec} % For loading fonts
+% Font properties
+\RequirePackage{fontspec} 
 \defaultfontfeatures{Ligatures=TeX}
-\setmainfont[Scale = .90]{Arial} % Main document font
+\setmainfont[Scale = .90]{Gill Sans Std}
 
-\RequirePackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
-\RequirePackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
-\RequirePackage{titlesec} % Used to customize the \section command
+% Customize the \section command, use a bar with large title
+\RequirePackage[noindentafter]{titlesec}
+\titleformat{\section}{
+    \raggedright\large
+    }{}{0em}{}[\titlerule] % Text formatting of sections
+    \titlespacing{\section}{0pt}{3pt}{5pt} % Spacing around sections
+    
+% Required for specifying custom colors
+\RequirePackage[usenames,dvipsnames]{xcolor}
+% Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+\RequirePackage[big]{layaureo}
 
+% Enable loading CV info from a json file
 \RequirePackage{cvinfo}
 
 \newcommand{\addInfo}[3]{%
@@ -32,13 +42,29 @@
     \end{minipage}%
     \hspace*{\fill}%
     \begin{minipage}{0.35\textwidth}%
-        \centering{#2}%
+        \begin{center}%
+            #2%
+        \end{center}%
     \end{minipage}%
     \hspace*{\fill}%
     \begin{minipage}{0.3\textwidth}%
         \begin{flushright}%
             #3%
         \end{flushright}%
+    \end{minipage}%
+}
+
+\newcommand{\addSites}[2]{%
+    \begin{minipage}{0.4\textwidth}%
+        \begin{center}%
+            #1%
+        \end{center}%
+    \end{minipage}%
+    \hspace*{\fill}%
+    \begin{minipage}{0.4\textwidth}%
+        \begin{center}%
+            #2%
+        \end{center}%
     \end{minipage}%
 }
 
@@ -52,10 +78,7 @@
     }
 }
 
-\titleformat{\section}{\scshape \raggedright\normalsize}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{0pt} % Spacing around sections
-
-\RequirePackage{forloop}
+\pagenumbering{gobble}
 
 \newenvironment{cvdoc}[1]{
     \begin{loadinfo}{#1}
@@ -72,7 +95,8 @@
                     \ctccellphone{}\\
                     \ctcemail%
                 }
-            }
+            }\\[5pt]
+            \addSites{github.com/\ignorespaces\ctcgithub}{facebook.com/\ignorespaces\ctcgitlab}
         }{}
         \newenvironment{education}{%
             \section{\textbf{\kwdedutitle{\cv@lang}}}
@@ -88,7 +112,7 @@
             \newcommand{\showwrk}[1]{%
                 \addInfoBf{\wrktype{\cv@lang}{####1}}{\wrkemployer{\cv@lang}{####1}}{\wrkperiod{\cv@lang}{####1}}
                 \begin{itemize}
-                    \setlength\itemsep{-0.75em}
+                    \setlength\itemsep{-0.25em}
                     \item \wrktitle{\cv@lang}{####1}
                     \item \wrkinfo{\cv@lang}{####1}
                 \end{itemize}
@@ -96,11 +120,10 @@
         }{}
         \newenvironment{skills}{
             \section{\textbf{\kwdskltitle{\cv@lang}}}
-            \addInfoBf{}{}{}
             \begin{itemize}
                 \setlength\itemsep{-0.75em}
-                \item \kwdsklstrong{\cv@lang}: \sklstrong%
-                \item \kwdsklknowledgeable{\cv@lang}: \sklknowledgeable%
+                \item \kwdsklstrong{\cv@lang}: \sklstrong{}
+                \item \kwdsklknowledgeable{\cv@lang}: \sklknowledgeable{}
             \end{itemize}
         }{}
 }{            
