@@ -41,7 +41,7 @@ Then you're ready to use it with the environment **loadinfo**:
 \end{cvdoc}%
 ```
 
-The *testinfo.json* must contain the fields used on cvinfo.sty file (check [cvinfo](https://github.com/ddspog/latex-cvinfo) for more information). Call each environment if you want that type of section to be added on your resume. Also when importing **cvplasmati** choose your language: EN of PT.
+The *testinfo.json* must contain the fields used on cvinfo.sty file (check [cvinfo](https://github.com/ddspog/latex-cvinfo) for more information). Call each environment if you want that type of section to be added on your resume. Also when importing **cvplasmati** choose your language: EN or PT.
 
 ## Contribution
 
