@@ -1,4 +1,4 @@
-# latex-cvplasmati
+# latex-cvplasmati [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 By [ddspog](https://github.com/ddspog)
 
